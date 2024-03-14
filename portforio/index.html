@@ -9,36 +9,105 @@
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <meta name="google-site-verification" content="tkIXpy4YfCfLT5-oJJ7JsRnvcx7S6FeNsmKOjnIr8AI" />
 </head>
 <body>
   <header>
     <!-- PC用ナビゲーション -->
     <nav>
       <div id="myprofile">
-        <h1>MyProfile</h1>
+        <h1>MY PROFILE</h1>
       </div>
       <div id="menu">
-        <a href="index.html#about">About</a>
-        <a href="index.html#works">Works</a>
+        <a class="menu" href="#about">ABOUT</a>
+        <a class="menu" href="#skill">SKILL</a>
+        <a class="menu" href="#works">WORKS</a>
+        <a class="menu" href="#contact">CONTACT</a>
       </div>
     </nav>
   </header>
   <main>
+    <!-- loading -->
+    <div id="loading">
+      <div id="loading_box">
+        <div class="loading-one animation_lading">
+          <p class="lading-txt">loading...</p>
+        </div>
+      </div>
+    </div>
+
     <!-- メインビジュアル -->
     <div id="main-visual">
-      <img src="image/main.png" alt="海を背景にしたアクセサリー">
+      <div class="carousel">
+        <div>
+          <img src="image/main1.jpg" class="carouselImg">
+        </div>
+        <div>
+          <img src="image/main2.jpg" class="carouselImg">
+        </div>
+        <div>
+          <img src="image/main3.jpg" class="carouselImg">
+        </div>
+        <div>
+          <img src="image/main4.jpg" class="carouselImg">
+        </div>
+      </div>
     </div>
     
     <!-- About -->
     <section id="about">
-      <h2>About</h2>
-      <div id="about-content">
-        <img src="image/about.png" alt="サーフボードの間でピースする自分">
-        <div id="about-text">
-          <h3>Miho Ishikawa</h3>
-          <ul>
-            <li>30歳 三重県出身</li>
+      <div class="a-item">
+        <h2 class="title">ABOUT</h2>
+        <div class="a-content">
+          <div id="about-content">
+            <img src="image/about.png" alt="サーフボードの間でピースする自分">
+            <div id="about-text">
+              <h3>MIHO ISHIKAWA</h3>
+                <p>
+                  30歳を機に収入の安定を目指しスクールでWeb制作について学んで参りました。<br>
+                </p>
+                <ul>
+                  <li>本業：管理栄養士</li>
+                  <li>年齢：30歳</li>
+                  <li>出身：三重県</li>
+                  <li>趣味：陶芸とスノーボード</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </section>
+
+    <!-- Skill -->
+    <section id="skill">
+      <div class="a-item">
+        <h2 class="title">SKILL</h2>
+        <div class="a-content">
+          <ul class="skill-content">
+            <li class="skill-item">
+              <img src="image/skills/html.png" alt="HTMLのアイコン" class="icon">
+              <p class="skill-name">HTML/CSS</p>
+            </li>
+            <li class="skill-item">
+              <img src="image/skills/js.png" alt="javascriptのアイコン" class="icon">
+              <p class="skill-name">JavaScript</p>
+            </li>
+            <li class="skill-item">
+              <img src="image/skills/jquery.png" alt="jqueryのアイコン" class="icon">
+              <p class="skill-name">jQuery</p>
+            </li>
+            <li class="skill-item">
+              <img src="image/skills/photoshop.png" alt="photoshopのアイコン" class="icon">
+              <p class="skill-name">PhotoShop</p>
+            </li>
+            <li class="skill-item">
+              <img src="image/skills/wordpress.png" alt="wordpressのアイコン" class="icon">
+              <p class="skill-name">WordPress</p>
+            </li>
           </ul>
         </div>
       </div>
@@ -46,32 +115,171 @@
 
     <!-- Works -->
     <section id="works">
-      <h2>Works</h2>
-      <ul id="works-content">
-        <li class="works-case">
-          <div class="case-img">
-            <img src="image/works1.png" alt="10月のもくもく会" class="case-img">
+      <div class="a-item">
+        <h2 class="title">WORKS</h2>
+        <div class="a-content">
+          <ul id="works-content">
+            <li class="works-case">
+              <div>
+                <a href="http://socialtech23.site/hairtech/"><img src="image/works/hairtech.png" alt="hairtechのトップページ画像" class="case-img"></a>
+              </div>
+              <div class="case-text">
+                <p class="product-time">美容院ホームページ</p>
+                <p class="impression">WordPressで作成しました（ノーコード）。</p>
+              </div>
+            </li>
+            <li class="works-case">
+              <div>
+                <a href="http://socialtech23.site/samuraiuniversity/"><img src="image/works/samuraiuniversity.png" alt="samuraiuniversityのトップページ画像" class="case-img"></a>
+              </div>
+              <div class="case-text">
+                <p class="product-time">大学ホームページ</p>
+                <p class="impression">WordPressでテーマを作成しました。</p>
+              </div>
+            </li>
+            <li class="works-case">
+              <div>
+                <a href="http://socialtech23.site/socialtech/"><img src="image/works/socialtech.png" alt="socialtechのトップページ画像" class="case-img"></a>
+              </div>
+              <div class="case-text">
+                <p class="product-time">コーポレートサイト</p>
+                <p class="impression">コーディングで作成しました。</p>
+              </div>
+            </li>
+            <li class="works-case">
+              <div>
+                <img src="image/works/banner/bn1.jpg" alt="10月のもくもく会女性版" class="case-img">
+              </div>
+              <div class="case-text">
+                <p class="product-time">受講生交流会のアイキャッチ</p>
+                <p class="impression">スクール内コンペに提出しました。</p>
+              </div>
+            </li>
+            <li class="works-case">
+              <div>
+                <img src="image/works/banner/bn2.jpg" alt="10月のもくもく会男性版" class="case-img">
+              </div>
+              <div class="case-text">
+                <p class="product-time">受講生交流会のアイキャッチ</p>
+                <p class="impression">スクール内コンペに提出しました。</p>
+              </div>
+            </li>
+            <li class="works-case">
+              <div>
+                <img src="image/works/banner/bn3.jpg" alt="11月のもくもく会" class="case-img">
+              </div>
+              <div class="case-text">
+                <p class="product-time">受講生交流会のアイキャッチ</p>
+                <p class="impression">スクール内コンペに提出しました。</p>
+              </div>
+            </li>
+            <li class="works-case">
+              <div>
+                <img src="image/works/banner/bn4.jpg" alt="3月の女性限定交流会" class="case-img">
+              </div>
+              <div class="case-text">
+                <p class="product-time">女性限定交流会のアイキャッチ</p>
+                <p class="impression">スクール内コンペに提出しました。</p>
+              </div>
+            </li>
+            <li class="works-case">
+              <div>
+                <img src="image/works/banner/bn5.jpg" alt="12月のもくもく会" class="case-img">
+              </div>
+              <div class="case-text">
+                <p class="product-time">受講生交流会のアイキャッチ</p>
+                <p class="impression">スクール内コンペに提出しました。</p>
+              </div>
+            </li>
+            <li class="works-case">
+              <div>
+                <img src="image/works/banner/bn6.jpg" alt="5月の女性限定交流会" class="case-img">
+              </div>
+              <div class="case-text">
+                <p class="product-time">女性限定交流会のアイキャッチ</p>
+                <p class="impression">スクール内コンペに提出しました。</p>
+              </div>
+            </li>
+            <li class="works-case">
+              <div>
+                <img src="image/works/banner/bn7.jpg" alt="5月の受講生交流会" class="case-img">
+              </div>
+              <div class="case-text">
+                <p class="product-time">受講生交流会のアイキャッチ</p>
+                <p class="impression">スクール内コンペに提出しました。</p>
+              </div>
+            </li>
+            <li class="works-case">
+              <div>
+                <img src="image/works/banner/bn8.jpg" alt="6月の受講生交流会" class="case-img">
+              </div>
+              <div class="case-text">
+                <p class="product-time">受講生交流会のアイキャッチ</p>
+                <p class="impression">スクール内コンペに提出しました。</p>
+              </div>
+            </li>
+            <li class="works-case">
+              <div>
+                <img src="image/works/banner/bn9.jpg" alt="7月の1DAYイベント" class="case-img">
+              </div>
+              <div class="case-text">
+                <p class="product-time">イベントのアイキャッチ</p>
+                <p class="impression">スクール内コンペに提出しました。</p>
+              </div>
+            </li>
+            <li class="works-case">
+              <div>
+                <img src="image/works/banner/bn10.jpg" alt="9月の受講生交流会" class="case-img">
+              </div>
+              <div class="case-text">
+                <p class="product-time">受講生交流会のアイキャッチ</p>
+                <p class="impression">スクール内コンペに提出しました。</p>
+              </div>
+            </li>
+            <li class="works-case">
+              <div>
+                <img src="image/works/banner/bn11.jpg" alt="10月の受講生交流会" class="case-img">
+              </div>
+              <div class="case-text">
+                <p class="product-time">受講生交流会のアイキャッチ</p>
+                <p class="impression">スクール内コンペに提出しました。</p>
+              </div>
+            </li>
+          </ul>
+          <div id="modal" class="modal">
+            <button class="close">閉じる</button>
+            <img class="modalImg" src=" ">
           </div>
-          <div class="case-text">
-            <p class="product-time">制作時間：3h</p>
-            <p class="impression">印象：busy</p>
-          </div>
-        </li>
-        <li class="works-case">
-          <div class="case-img">
-            <img src="image/works2.png" alt="11月のもくもく会" class="case-img">
-          </div>
-          <div class="case-text">
-            <p class="product-time">制作時間：3h</p>
-            <p class="impression">印象：interesting</p>
-          </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="a-item">
+        <h2 class="title">CONTACT</h2>
+        <div class="a-content">
+          <div id="contact-content">
+            <div class="email-icon">
+              <a href="mailto:mooort1023@gmail.com?subject=お仕事依頼"><img src="image/email-icon.png" alt="メールのアイコン"></a>
+            </div>
+            <div class="contact-txt">
+              <p>お問い合わせはメールにてお願いいたします。</p>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </section>
+
+    <a href="#" id="backBtn">TOP</a>
+
   </main>
   <footer>
     <p><small>&copy; MyProfile. All right reserved.</small></p>
   </footer>
   
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

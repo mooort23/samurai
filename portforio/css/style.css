@@ -1,28 +1,137 @@
+.sawarabi-gothic-regular {
+  font-family: "Sawarabi Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
-  font-family: 'Josefin Sans', sans-serif;
-  font-family: 'Noto Sans JP', sans-serif;
   margin: 0;
 }
 
 /* ナビゲーションのリンク */
-nav > #menu > a:link {
+#menu > a:link {
   color: #080808;
 }
-nav > #menu > a:visited {
-  color: #080808;
-}
-nav > #menu > a:hover {
-  color: #080808;
-  text-decoration: underline;
-}
-nav > #menu > a:active {
+#menu > a:visited {
   color: #080808;
 }
 
 /* メインビジュアル */
-#main-visual > img {
+.carouselImg {
   width: 100%;
   height: auto;
+}
+
+/* TOPボタン */
+#backBtn {
+  bottom: 38px;
+  right: 20px;
+  background-color: #080808;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 28px 24px;
+  border-radius: 50%;
+  display: none;
+  position: fixed;
+}
+
+/* フェードイン */
+section {
+  opacity: 0;
+  transition: 1s;
+}
+
+.fadeIn {
+  opacity: 1.0;
+}
+
+/* モーダルウィンドウ */
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal > img {
+  position: absolute;
+  width: 80%;
+  max-width: 800px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+/* アコーディオン */
+.a-content {
+  display: none;
+}
+
+.title {
+  position: relative;
+}
+
+.title::after {
+  content: "　▼";
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+
+}
+
+.title.open::after {
+  content: "　▲";
+  font-size: 20px;
+}
+
+/* loading */
+#loading {
+  width: 100%;
+  height: 100vh;
+  background-color: #999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 99999;
+}
+
+#loading_box {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: (-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.loading-one {
+  display: inline-block;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.loading-one p.loading-txt {
+  color: #fff;
+  font-size: 50px;
+  letter-spacing: 0.25em;
+  line-height: 2.0;
+  padding: 2em 0;
 }
 
 /* ===============PC用=============== */
@@ -30,14 +139,13 @@ nav > #menu > a:active {
 
   /* ナビゲーション */
   nav {
-    width: 80%;
     display: flex;
     justify-content: space-between;
-    margin:10px auto;
+    margin:10px 100px;
   }
 
   #myprofile {
-    margin: 20px 40px 20px 40px;
+    margin: 20px 0 20px 0;
     padding: 10px 20px 10px 20px;
     border: 1px solid #080808;
     text-align: center;
@@ -49,17 +157,21 @@ nav > #menu > a:active {
     margin: 0;
   }
 
-  nav > #menu {
-    padding: 20px;
+  #menu {
+    width: 50%;
     margin: auto 0 auto 0;
-    text-align: center;
+    display: flex;
+    justify-content: right;
   }
 
-  nav > #menu > a {
+  .menu {
+
+    text-align: center;
     font-weight: bold;
-    font-size: 34px;
+    font-size: 24px;
     text-decoration: none;
-    padding: 20px;
+    margin: 0 15px 0 15px;
+
   }
 
   /* 見出し */
@@ -67,7 +179,7 @@ nav > #menu > a:active {
     text-align: center;
     font-size: 34px;
     font-weight: bold;
-    margin-top: -10px;
+    margin-top: 80px;
     margin-bottom: 50px;
   }
 
@@ -94,24 +206,68 @@ nav > #menu > a:active {
     font-weight: bold;
   }
 
-  #about-text > ul > li {
-    font-size: 18px;
+  #about-text > p {
+    font-size: 15px;
   }
 
-  /* Works */
-  #works-content {
+  #about-text > ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  #about-text > ul >li {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  /* Skill */
+  .skill-content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
+    margin: 80px 50px 150px 50px;
+
+  }
+
+  .skill-item {
+    width: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .icon {
+    width: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+  }
+
+  .skill-name {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  /* Works */
+  #works-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0 50px 0 50px;
     margin: 50px 0 120px 0;
   }
 
   .works-case {
     width: 25%;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-    margin: 0 5% 0 5%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 50px;
   }
 
   .case-img {
@@ -124,14 +280,39 @@ nav > #menu > a:active {
   }
 
   .case-text > p {
-    font-size: 18px;
+    font-size: 15px;
     margin: 10px 0 10px 0;
+  }
+
+  /* Contact */
+  #contact-content {
+    margin: 50px 50px 50px 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .mail-icon {
+    width: 10%;
+  }
+
+  .mail-icon > img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .contact-txt {
+    font-size: 18px;
+    margin-left: 20px;
   }
 
   footer {
     text-align: center;
     font-size: 18px;
+    margin-top: 150px;
   }
+
+  
 }
 
 /* ============== スマホ用 ===============*/
@@ -203,28 +384,59 @@ nav > #menu > a:active {
     margin: 10px;
   }
 
-  #about-text > ul {
+  #about-text > p {
     margin: 0 5px 0 20px;
     padding: 5px;
+    font-size: 9px;
   }    
   
-  #about-text > ul > li {
-    font-size: 9px;
+  /* skill */
+  .skill-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 30px 50px 30px 50px;
   }
+
+  .skill-item {
+    width: 25%;
+    margin-right: 4%;
+    margin-left: 4%;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .icon {
+    width: 50%;
+  }
+
+  .skill-name {
+    text-align: center;
+    font-size: 9px;
+    font-weight: bold;
+  }
+
+
 
   /* Works */
   #works-content {
     display: block;
     text-align: center;
     list-style: none;
-    margin-bottom: 120px;
     padding: 0;
+    margin-bottom: 50px;
   }
 
   .works-case {
     width: 70%;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-    margin: 0 15% 5% 15%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 30px;
+    margin-bottom: 30px;
     padding-bottom: 10px;
   }
 
@@ -243,9 +455,33 @@ nav > #menu > a:active {
     margin: 10px 0 10px 0;
   }
 
+    /* Contact */
+    #contact-content {
+      margin: 50px 50px 50px 50px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .mail-icon {
+      width: 10%;
+    }
+  
+    .mail-icon > img {
+      width: 45px;
+      height: 45px;
+    }
+  
+    .contact-txt {
+      font-size: 9px;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
   footer {
     text-align: center;
-    font-size: 9px;
+    font-size: 12px;
+    margin-top: 80px;
   }
 
 }
