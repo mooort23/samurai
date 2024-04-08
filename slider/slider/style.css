@@ -1,0 +1,42 @@
+
+.slide-item {
+  width: 100%;
+  height: auto;
+}
+.slide-item > img {
+  width: 100%;
+  height: auto;
+}
+.slide-item > p {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+}
+.swiper-slide-next , .swiper-slide-prev {
+  opacity: 0.3;
+}
+/* 矢印 */
+.swiper-button-prev::after {
+  content: "";
+  content: "< ---";
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  left: 300px;
+
+}
+.swiper-button-next::after {
+  content: "";
+  content: "--- >";
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  right: 300px;
+}
